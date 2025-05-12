@@ -24,16 +24,21 @@ namespace LoginJWT.Controllers
         [Route("Register")]
         public async Task<IActionResult> Register(UserDTO userObject)
         {
+            if (await _loginDbContext.Users.AnyAsync(u => u.Email == userObject.Email))
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, new { isSuccess = false, message = "Email is already registered" });
+            } 
+
             var UserModel = new User
             {
                 Name = userObject.Name,
                 Email = userObject.Email,
-                Password = userObject.Password
+                Password = _utilities.encryptSHA256(userObject.Password)
             };
 
-            await _loginDbContext.SaveChangesAsync();
             await _loginDbContext.Users.AddAsync(UserModel);
-
+            await _loginDbContext.SaveChangesAsync();
+            
             if(UserModel.IdUser != 0)
                 return StatusCode(StatusCodes.Status200OK, new {isSuccess = true});
             else

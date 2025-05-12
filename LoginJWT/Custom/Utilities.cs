@@ -52,6 +52,9 @@ namespace LoginJWT.Custom
                 expires: DateTime.UtcNow.AddMinutes(10),
                 signingCredentials: credentials
             );
+
+            // final token
+            return new JwtSecurityTokenHandler().WriteToken(jwtConfig);
         }
 
     }

@@ -1,0 +1,61 @@
+﻿# Build results
+bin/
+obj/
+
+# Rider project files
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Visual Studio-specific folders
+.vs/
+
+# Backup & temporary files
+*.bak
+*.tmp
+
+# ASP.NET Core secrets
+appsettings.Development.json
+secrets.json
+
+# Entity Framework Migrations Snapshots (optional: include if needed)
+# Migrations/
+
+# Logs
+*.log
+
+# Publish output
+publish/
+
+# Packages
+*.nupkg
+*.snupkg
+
+# IIS Express
+.vs/
+*.vspscc
+*.vssscc
+
+# NuGet
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# dotCover
+.idea/.dotCover
+
+# JetBrains Rider
+.idea/
+
+# Others
+TestResults/

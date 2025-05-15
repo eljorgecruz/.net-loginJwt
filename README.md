@@ -2,6 +2,13 @@
 
 A secure **JWT-based authentication system** with a product catalog, built with **ASP.NET Core 8**, **Entity Framework Core**, and **SQL Server (Dockerized)**.  
 
+## Demostration
+### Create user
+![](https://github.com/eljorgecruz/.net-loginJwt/blob/main/create_user.gif)
+
+### Log in
+![](https://github.com/eljorgecruz/.net-loginJwt/blob/main/login.gif)
+
 ## 🚀 Features  
 - **JWT Authentication** (Register, Login, Token Generation)  
 - **Product Catalog** (Protected endpoints for authorized users)  
